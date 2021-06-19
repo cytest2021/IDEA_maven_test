@@ -8,9 +8,10 @@
     <classes>
       <class name="com.lemon.testcases.LoginTest">
         <methods>
-          <include name="loginTestFailure2" invocation-numbers="0 1"/>
+          <include name="loginTestFailure2"/>
           <include name="setup"/>
           <include name="teardown"/>
+          <include name="loginTestFailure1"/>
         </methods>
       </class> <!-- com.lemon.testcases.LoginTest -->
     </classes>
