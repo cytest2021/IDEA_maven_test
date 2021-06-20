@@ -35,7 +35,7 @@ public class BaseTest {
         //equalsIgnoreCase  这个String的api意思是忽略大小写
         if ("chrome".equalsIgnoreCase(browserName)){
             //执行打开chrome的代码
-            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.addArguments("--headless");
             driver = new ChromeDriver(chromeOptions);
