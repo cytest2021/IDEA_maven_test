@@ -6,9 +6,11 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+
 
 import java.io.File;
 import java.io.IOException;
@@ -33,8 +35,10 @@ public class BaseTest {
         //equalsIgnoreCase  这个String的api意思是忽略大小写
         if ("chrome".equalsIgnoreCase(browserName)){
             //执行打开chrome的代码
-            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
-            driver = new ChromeDriver();
+            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+            ChromeOptions chromeOptions = new ChromeOptions();
+            chromeOptions.addArguments("--headless");
+            driver = new ChromeDriver(chromeOptions);
             logger.info("打开【chrome】浏览器");
         }else if ("firefox".equals(browserName)){
             //执行打开firefox的代码
