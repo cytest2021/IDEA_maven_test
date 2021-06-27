@@ -44,7 +44,7 @@ public class LoginTest extends BaseTest {
         //正确账号密码登录
         //输入账号、密码，点击登录
         LoginPage loginPage = new LoginPage();
-        loginPage.login(Constants.CORRECT_PHONE,"123");
+        loginPage.login(Constants.CORRECT_PHONE,Constants.CORRECT_PASSWORD);
         //断言
         //1、根据元素出现（根据退出按钮出现）
         IndexPage indexPage = new IndexPage();
